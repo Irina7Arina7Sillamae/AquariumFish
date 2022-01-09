@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Dashboard</title>
+<link href="public/css/bootstrap.css" rel="stylesheet">
+<link href="public/css/mystyle.css" rel="stylesheet">
+<!-- Font Awesome -->   
+<link rel="stylesheet" href="public/css/font-awesome.min.css">
+<!-- SCRIPT -->
+<script src="public/js/jquery.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="public/js/ajaxupload.3.5.js"></script>
+</head>
+<body>
+    <div class="container">
+<!--  -->
+        <?php
+        if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"]))
+        {
+        ?>
+    <div class="header clearfix">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+            <?php
+            echo '<ul class="nav nav-pills pull-right">
+            <li role="button">'.$_SESSION["name"].
+            '<a href="logout" style="display: inline;">Log off<i class="fa fa-sing-out"></i>
+            </a></li></ul>';
+ 
+if(isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
+ 
+            echo '<h4><a href="../" target=_blank style="color: #007bff;">Web site FishPortal</a>';
+            echo '   &#187 <a href="./" style="color: #007bff;">Start admin</a>';
+            echo '   &#187 <a href="categoryAdmin" style="color: #007bff;">Fish categories</a>';
+            echo '   &#187 <a href="newsAdmin" style="color: #007bff;">FishList</a>';
+            
+            echo ' </h4>';
+}else{
+    echo '<h4>You have no rights!</h4>';
+}
+    ?>
+<!--  -->
+    </div>
+    </nav>
+    </div>
+        <?php
+        }
+        ?>
+<!--  -->
+    <div id="content" style="padding-top:20px;">
+            
+            <?php echo $content; ?>
+            
+    </div>
+    <footer class="footer">
+        <p style="color: #007bff;"><i class="fa fa-child">&copy; 2021 Desing Admin dashboard</i></p>
+    </footer>
+    </div><!-- /container -->
+</body>
+</html>

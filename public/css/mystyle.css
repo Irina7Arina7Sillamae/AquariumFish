@@ -1,0 +1,51 @@
+ #content{
+                margin:0 auto;
+                width:1000px;
+				/*min-height:500px;
+				height: 100%;*/
+				 
+            }
+			img {
+				float: left;
+				width: 100px;
+				height:100px;
+				padding-right: 10px;
+			}
+            .zoom {
+                /* padding: 50px;
+                background-color: green; */
+                transition: transform .5s; 
+                /* width: 200px;
+                height: 200px;
+                margin: 0 auto; */
+              }
+              
+              .zoom:hover {
+                transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+              }
+            article{
+                /*background: #e1ffe1;*/
+                border: 1px solid #4caf50;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin: 20px;
+                color: #313331;
+				
+				min-height:230px;
+				width:700px;
+			
+            }
+            article h3{
+                color: #007bff;
+            }
+            article h3 a{
+                color: #007bff;
+            }			
+            article p{
+			font-size:16px;
+            }
+
+            ul{
+                list-style:none;
+            }
+           
