@@ -25,7 +25,7 @@ public static function CommentsCountWithAncor ($value) {
     }
 public static function CommentsCount($value) {
     if ($value['count']>0) {
-        echo '<b><font color="goldenrod" style = "text-shadow: 1px 2px 1px #b3b3b3;">('.$value['count'].') </font></b>';
+        echo '<b><font color="gold" style = "text-shadow: 1px 1px 1px #000020;">('.$value['count'].') </font></b>';
     }
 }
 

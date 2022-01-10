@@ -5,7 +5,6 @@ class News {
         $query = "SELECT * FROM news ORDER BY id DESC LIMIT 6";
         $db = new database();
         $arr = $db->getAll($query);
-        //echo 'start site3';
         return $arr;
     }
     public static function getAllNews() {

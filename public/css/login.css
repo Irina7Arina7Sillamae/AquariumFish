@@ -2,6 +2,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
+  background: url("aquaticplants.jpg") center center/cover no-repeat;
 }
 
 .form-signin {

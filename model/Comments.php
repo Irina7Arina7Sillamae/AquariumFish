@@ -10,11 +10,11 @@ class Comments {
     }
 
     public static function getCommentByNewsID($id) {
-        $query = "SELECT * FROM comments WHERE news_id=".(string)$id." ORDER BY id DESC";
-        //echo $query;
-        $db = new database();
-        $arr = $db->getAll($query);
-        return $arr;
+    $query = "SELECT * FROM comments WHERE news_id=".(string)$id." ORDER BY id DESC";
+    //echo $query;
+    $db = new database();
+    $arr = $db->getAll($query);
+    return $arr;
     }
 
     public static function getCommentsCountByNewsID($id) {

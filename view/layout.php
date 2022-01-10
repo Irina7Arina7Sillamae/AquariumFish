@@ -25,8 +25,9 @@
                 ?>
                 </ul>
         </li>
-        <li><a class = "zoom" href="testError">AquariumNews</a></li>
+        <li><a class = "zoom" href="testError">Info</a></li>
         <li><a class = "zoom" href="./">StartPage</a></li>
+        <li><a class = "zoom" href="allPlants">AquaticPlants</a></li>
         <li><a class = "zoom" href="registerForm">Registration</a></li>
         <div class="pull-right">
             <li>

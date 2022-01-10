@@ -2,11 +2,11 @@
 ob_start();
 ?>
 
-<h1>All Aquarium Fish</h1>
+<h1 >TOP 6 Aquarium Fish</h1>
 <br>
 
 <?php
-ViewNews::AllNews($arr);
+//ViewNews::NewsByCategory($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';
 ?>

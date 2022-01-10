@@ -46,16 +46,20 @@ class Controller {
         ViewComments::CommentsCountWithAncor($arr);
     }
     //--------------------------------- РЕГИСТРАЦИЯ
-   public static function registerForm()
-   {   
+   public static function registerForm(){   
        include_once('view/formRegister.php');
-   }   
-   public static function registerUser()
-   {   
+   } 
+
+   public static function registerUser(){   
        $result = Register::registerUser();
-       
        include_once('view/answerRegister.php');
    }
+   //-----------------------------------Plants
+   public static function AllPlants() {
+    $arr = Plants::getLast6Plants();
+    include_once 'view/plants.php';
+}
+
 }
 // end class
 // $c - текст комментария

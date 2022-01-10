@@ -52,4 +52,5 @@ class database {
         $response = $this->conn->exec($query);
         return $response;
     }
+    
 }

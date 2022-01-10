@@ -7,12 +7,14 @@ class ViewNews {
 
         foreach ($arr as $value) {
             echo '<div class="col">';
+            echo '<div class="thumbnail">';
             echo '<div class="zoom">';
-            echo '<img src="data:image/jpeg;base64,'.base64_encode($value['picture']).'"width=200 height=150 /><br>';
+            echo '<img src="data:image/jpeg;base64,'.base64_encode($value['picture']).'"width=198 height=150 /><br>';
+            echo '</div>';
             echo "<h3>".$value['title']."</h3>";
             echo '</div>';
             Controller::CommentsCount($value['id']);
-            echo "<a href='news?id=".$value['id']."'>Next</a><br>";
+            echo "<a class='next' href='news?id=".$value['id']."'>Next</a><br>";
             echo '</div>';
         }
         echo '</div>';
@@ -22,7 +24,7 @@ class ViewNews {
         foreach ($arr as $value) {
             echo "<li>".$value['title'];
             Controller::CommentsCount($value['id']);
-            echo "<a href='news?id=".$value['id']."'>Next</a></li><br>";
+            echo "<a class='next' href='news?id=".$value['id']."'>Next</a></li><br>";
         }
     }
     public static function ReadNews ($n) {
