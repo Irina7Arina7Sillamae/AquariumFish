@@ -21,7 +21,7 @@ elseif($path == 'insertcomment' and isset($_GET['comment'],$_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'],$_GET['id']);
 }
 //------------------------------------plants
-elseif($path == 'plants') {
+elseif($path == 'allPlants') {
     $response = Controller::AllPlants();
 }
 

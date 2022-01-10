@@ -21,6 +21,12 @@ class Controller {
         $n = News::getNewsByID($id);
         include_once 'view/readnews.php';
     }
+     //-----------------------------------Plants
+   public static function AllPlants() {
+    $arr = Plants::getAllPlants();
+    include_once 'view/plants.php';
+}
+
     public static function error404() {
         include_once 'view/error404.php';
     }
@@ -54,12 +60,7 @@ class Controller {
        $result = Register::registerUser();
        include_once('view/answerRegister.php');
    }
-   //-----------------------------------Plants
-   public static function AllPlants() {
-    $arr = Plants::getLast6Plants();
-    include_once 'view/plants.php';
-}
-
+  
 }
 // end class
 // $c - текст комментария

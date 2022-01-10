@@ -41,7 +41,7 @@
     </nav>
 
 <!-- Раздел содержания -->
-<section>
+<section class="bg">
     <div class="divBox">
         <?php
         if(isset($content)){

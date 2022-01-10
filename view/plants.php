@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<h1>TOP 6 Aquarium Plants</h1>
+<h1>Aquarium Plants</h1>
 <br>
 
 <?php
