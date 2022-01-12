@@ -14,7 +14,7 @@ class ViewPlants {
             echo "<h3>".$value['title']."</h3>";
             echo '</div>';
             //Controller::CommentsCount($value['id']);
-            echo "<a class='next' href='news?id=".$value['id']."'>Next</a><br>";
+            echo "<a class='next' href='products?id=".$value['id']."'>Next</a><br>";
             echo '</div>';
         }
         echo '</div>';

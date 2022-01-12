@@ -2,11 +2,11 @@
 ob_start();
 ?>
 
-<h1>Fish (categories)</h1>
+<h1>All Aquarium Fish</h1>
 <br>
 
 <?php
-ViewNews::NewsByCategory($arr);
+ViewProducts::AllProducts($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';
 ?>

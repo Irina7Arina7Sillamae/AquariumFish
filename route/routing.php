@@ -9,13 +9,13 @@ if($path == '' OR $path == 'index' OR $path == 'index.php') {
 }
 
 elseif($path == 'all') {
-    $response = Controller::AllNews();
+    $response = Controller::AllProducts();
 }
 elseif($path == 'category' and isset($_GET['id'])) {
-    $response = Controller::NewsByCatID($_GET['id']);
+    $response = Controller::ProductsByCatID($_GET['id']);
 }
-elseif($path == 'news' and isset($_GET['id'])) {
-    $response = Controller::NewsByID($_GET['id']);
+elseif($path == 'products' and isset($_GET['id'])) {
+    $response = Controller::ProductsByID($_GET['id']);
 }
 elseif($path == 'insertcomment' and isset($_GET['comment'],$_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'],$_GET['id']);

@@ -1,7 +1,7 @@
 <?php
-class ViewNews {
+class ViewProducts {
 
-    public static function NewsByCategory ($arr) {
+    public static function ProductsByCategory ($arr) {
         echo '<div class="container">';
         echo '<div class="row">';
 
@@ -14,20 +14,20 @@ class ViewNews {
             echo "<h3>".$value['title']."</h3>";
             echo '</div>';
             Controller::CommentsCount($value['id']);
-            echo "<a class='next' href='news?id=".$value['id']."'>Next</a><br>";
+            echo "<a class='next' href='products?id=".$value['id']."'>Next</a><br>";
             echo '</div>';
         }
         echo '</div>';
         echo '</div>';
     }
-    public static function AllNews ($arr) {
+    public static function AllProducts ($arr) {
         foreach ($arr as $value) {
             echo "<li>".$value['title'];
             Controller::CommentsCount($value['id']);
             echo "<a class='next' href='news?id=".$value['id']."'>Next</a></li><br>";
         }
     }
-    public static function ReadNews ($n) {
+    public static function ReadProducts ($n) {
         echo "<h2>".$n['title']."</h2>";
         Controller::CommentsCountWithAncor($n['id']);   
         echo '<br><img class = "zoom" src="data:image/ipeg;base64,'.base64_encode($n['picture']).'"
@@ -35,6 +35,6 @@ class ViewNews {
 
         echo "<p><br>".$n['text']."</p>";
         }
-    //Добавить методы для других видов представления новостей
+    //Добавить методы для других видов представления Product
     }//end class
     

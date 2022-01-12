@@ -9,7 +9,7 @@ class ViewComments {
     
         }
 
-public static function CommentsByNews ($arr) {
+public static function CommentsByProducts ($arr) {
     if($arr!=null) {
     echo '<table id="ctable"><th>Comment</th><th>Date</th>';
     foreach($arr as $value) {

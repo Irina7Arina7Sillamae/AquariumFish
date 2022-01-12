@@ -1,42 +1,42 @@
 <?php
-class controllerAdminNews {
-//------------------------------------------list News
-    public static function NewsList() {
+class controllerAdminProducts {
+//------------------------------------------list Products
+    public static function ProductsList() {
 
-        $arr = modelAdminNews::getNewsList();
-        include_once ('viewAdmin/newsList.php');
+        $arr = modelAdminProducts::getProductsList();
+        include_once ('viewAdmin/productsList.php');
     }
 //-------------------------------------------------add
-    public static function newsAddForm() {
+    public static function productsAddForm() {
         $arr = modelAdminCategory::getCategoryList();
-        include_once('viewAdmin/newsAddForm.php');
+        include_once('viewAdmin/productsAddForm.php');
     }
 
-    public static function newsAddResult() {
-        $test = modelAdminNews::getNewsAdd();
-        include_once('viewAdmin/newsAddForm.php');
+    public static function productsAddResult() {
+        $test = modelAdminProducts::getProductsAdd();
+        include_once('viewAdmin/productsAddForm.php');
     }
 //-------------------------------------------------edit
-    public static function newsEditForm($id) {
+    public static function productsEditForm($id) {
         $arr = modelAdminCategory::getCategoryList();
-        $detail = modelAdminNews::getNewsDetail($id);
-        include_once('viewAdmin/newsEditForm.php');
+        $detail = modelAdminProducts::getProductsDetail($id);
+        include_once('viewAdmin/productsEditForm.php');
     }
 
-    public static function newsEditResult($id) {
-        $test = modelAdminNews::getNewsEdit($id);
-        include_once('viewAdmin/newsEditForm.php');
+    public static function productsEditResult($id) {
+        $test = modelAdminProducts::getProductsEdit($id);
+        include_once('viewAdmin/productsEditForm.php');
     }
 //------------------------------------------------delete
-    public static function newsDeleteForm($id) {
+    public static function productsDeleteForm($id) {
         $arr = modelAdminCategory::getCategoryList();
-        $detail = modelAdminNews::getNewsDetail($id);
-        include_once('viewAdmin/newsDeleteForm.php');
+        $detail = modelAdminProducts::getProductsDetail($id);
+        include_once('viewAdmin/productsDeleteForm.php');
     }
 
-    public static function newsDeleteResult($id) {
-        $test = modelAdminNews::getNewsDelete($id);
-        include_once('viewAdmin/newsDeleteForm.php');
+    public static function productsDeleteResult($id) {
+        $test = modelAdminProducts::getProductsDelete($id);
+        include_once('viewAdmin/productsDeleteForm.php');
     }
 
 }// class

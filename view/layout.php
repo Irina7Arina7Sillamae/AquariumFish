@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Aquarium Fish</title>
+    <title>Products</title>
 </head>
 <body>
     
@@ -27,7 +27,7 @@
         </li>
         <li><a class = "zoom" href="testError">Info</a></li>
         <li><a class = "zoom" href="./">StartPage</a></li>
-        <li><a class = "zoom" href="allPlants">AquaticPlants</a></li>
+        <li><a class = "zoom" href="allPlants">OtherProducts</a></li>
         <li><a class = "zoom" href="registerForm">Registration</a></li>
         <div class="pull-right">
             <li>
@@ -56,7 +56,7 @@
 
 <!-- Footer -->
 <hr>
-<p style = "display:block; text-align:center; color:#007bff;"> &copy Aquarium Fish 2021 </p>
+<p style = "display:block; text-align:center; color:#007bff;"> &copy Trading 2021 </p>
 
     </body>
 </html>

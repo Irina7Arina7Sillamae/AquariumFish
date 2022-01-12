@@ -29,10 +29,11 @@
  
 if(isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
  
-            echo '<h4><a href="../" target=_blank style="color: #007bff;">Web site FishPortal</a>';
+            echo '<h4><a href="../" target=_blank style="color: #007bff;">Web site TradingPortal</a>';
             echo '   &#187 <a href="./" style="color: #007bff;">Start admin</a>';
-            echo '   &#187 <a href="categoryAdmin" style="color: #007bff;">Fish categories</a>';
-            echo '   &#187 <a href="newsAdmin" style="color: #007bff;">FishList</a>';
+            echo '   &#187 <a href="categoryAdmin" style="color: #007bff;">Products categories</a>';
+            echo '   &#187 <a href="productsAdmin" style="color: #007bff;">ProductsList</a>';
+            echo '   &#187 <a href="producAdmin" style="color: #007bff;">OverProducsList</a>';
             
             echo ' </h4>';
 }else{

@@ -18,30 +18,30 @@ elseif ($path == 'logout')
     // Выход
     $response = controllerAdmin::logoutAction();
 }
-//---------------------------------------listNews
-elseif($path=='newsAdmin') {
-    $response = controllerAdminNews::NewsList();
+//---------------------------------------listProducts
+elseif($path=='productsAdmin') {
+    $response = controllerAdminProducts::ProductsList();
 }
-//---------------------------------------add news
-elseif($path=='newsAdd') {
-    $response = controllerAdminNews::newsAddForm();
+//---------------------------------------add products
+elseif($path=='productsAdd') {
+    $response = controllerAdminProducts::productsAddForm();
 }
-elseif($path=='newsAddResult') {
-    $response = controllerAdminNews::newsAddResult();
+elseif($path=='productsAddResult') {
+    $response = controllerAdminProducts::productsAddResult();
 }
-//---------------------------------------edit news
-elseif($path=='newsEdit' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsEditForm($_GET['id']);
+//---------------------------------------edit products
+elseif($path=='productsEdit' && isset($_GET['id'])) {
+    $response = controllerAdminProducts::productsEditForm($_GET['id']);
 }
-elseif($path=='newsEditResult' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsEditResult($_GET['id']);
+elseif($path=='productsEditResult' && isset($_GET['id'])) {
+    $response = controllerAdminProducts::productsEditResult($_GET['id']);
 }
-//-------------------------------------delete news
-elseif($path=='newsDel' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsDeleteForm($_GET['id']);
+//-------------------------------------delete products
+elseif($path=='productsDel' && isset($_GET['id'])) {
+    $response = controllerAdminProducts::productsDeleteForm($_GET['id']);
 }
-elseif($path=='newsDelResult' && isset($_GET['id'])) {
-    $response = controllerAdminNews::newsDeleteResult($_GET['id']);
+elseif($path=='productsDelResult' && isset($_GET['id'])) {
+    $response = controllerAdminProducts::productsDeleteResult($_GET['id']);
 }
 else {   // Страница не существует
     $response = controllerAdmin::error404();

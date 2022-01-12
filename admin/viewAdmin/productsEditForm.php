@@ -1,34 +1,34 @@
-<?php ob_start(); ?>
+<?php ob_start(); ?>Product
 
 <div class="container" style="min-height: 400px;">
     <div class="col-md-11">
-        <h2>News Edit</h2>
+        <h2>Products Edit</h2>
         <?php
         if (isset($test)) {
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>Запись изменена. </strong><a href="newsAdmin">Список новостей</a>
+                    <strong>Запись изменена. </strong><a href="productsAdmin">Список новостей</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Ошибка изменения записи!</strong><a href="newsAdmin">Список новостей</a>
+                    <strong>Ошибка изменения записи!</strong><a href="productsAdmin">Product List</a>
                 </div>
             <?php
             }
         } else {
             ?>
-            <form method="POST" action="newsEditResult?id=<?php echo $id; ?>" enctype="multipart/form-data">
+            <form method="POST" action="productsEditResult?id=<?php echo $id; ?>" enctype="multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
-                        <td>News title</td>
+                        <td>Products title</td>
                         <td><input type="text" name="title" class="form-control" required value="<?php 
                         echo $detail['title']; ?>" ></td>
                     </tr>
                     <tr>
-                        <td>News text</td>
+                        <td>Products text</td>
                         <td><textarea rows="5" name="text" class="form-control" required><?php 
                         echo $detail['text']; ?></textarea></td>
                     </tr>
@@ -72,7 +72,7 @@
                             <button type="submit" class="btn btn-primary" name="save">
                                 <span class="glyphicon glyphicon-plus"></span>&nbsp;Изменить
                             </button>
-                            <a href="newsAdmin" class="btn btn-large btn-success">
+                            <a href="ProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Назад к списку</a>
                         </td>
                     </tr>

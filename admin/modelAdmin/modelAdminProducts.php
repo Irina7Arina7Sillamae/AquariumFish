@@ -1,16 +1,16 @@
 <?php 
-class modelAdminNews {
-    public static function getNewsList() {
-    $query = "SELECT news.*, category.name,users.username from news,
-    category,users WHERE news.category_id=category.id AND
-    news.user_id = users.id ORDER BY `news`.`id` DESC";
+class modelAdminProducts {
+    public static function getProductsList() {
+    $query = "SELECT products.*, category.name,users.username from products,
+    category,users WHERE products.category_id=category.id AND
+    products.user_id = users.id ORDER BY `products`.`id` DESC";
     $db = new database();
     $arr = $db->getAll($query);
     return $arr;
      }
 
 //------------------------------------------------Add
-public static function getNewsAdd(){
+public static function getProductsAdd(){
     $test = false;
     if(isset($_POST['save'])) {
         if(isset($_POST['title']) && isset($_POST['text']) && isset($_POST['idCategory'])) {
@@ -34,16 +34,16 @@ public static function getNewsAdd(){
     }
 return $test;
 }
-//---------------------------------------news detail id
-public static function getNewsDetail($id) {
-    $query = "SELECT news.*, category.name, users.username FROM news, category, users 
-    WHERE news.category_id=category.id AND news.user_id=users.id AND news.id=".$id;
+//---------------------------------------products detail id
+public static function getProductsDetail($id) {
+    $query = "SELECT products.*, category.name, users.username FROM products, category, users 
+    WHERE products.category_id=category.id AND products.user_id=users.id AND products.id=".$id;
     $db = new database();
     $arr = $db->getOne($query);
     return $arr;
 }
-//--------------------------------------------news edit
-public static function getNewsEdit($id) {
+//--------------------------------------------products edit
+public static function getProductsEdit($id) {
     $test = false;
     if(isset($_POST['save'])) {
         if(isset($_POST['title']) && isset($_POST['text']) && isset($_POST['idCategory'])) {
@@ -62,12 +62,12 @@ public static function getNewsEdit($id) {
             }
 //-----------------------------------------------------
                 if($image=="") {
-                    $sql = "UPDATE `news` SET `title` = '$title', `text` = '$text',
-                    `category_id` = '$idCategory' WHERE `news`.`id` = ".$id;
+                    $sql = "UPDATE `products` SET `title` = '$title', `text` = '$text',
+                    `category_id` = '$idCategory' WHERE `products`.`id` = ".$id;
                 }
                 else {
-                    $sql = "UPDATE `news` SET `title` = '$title', `text` = '$text', `picture` = '$image', 
-                    `category_id` = '$idCategory' WHERE `news`.`id` = ".$id;
+                    $sql = "UPDATE `products` SET `title` = '$title', `text` = '$text', `picture` = '$image', 
+                    `category_id` = '$idCategory' WHERE `products`.`id` = ".$id;
                 }
                         $db = new database();
                         $item = $db->executeRun($sql);
@@ -78,11 +78,11 @@ public static function getNewsEdit($id) {
         }
         return $test;
     }
-//------------------------------------------news delete
-    public static function getNewsDelete($id) {
+//------------------------------------------products delete
+    public static function getProductsDelete($id) {
         $test = false;
         if(isset($_POST['save'])) {
-            $sql = "DELETE FROM `news` WHERE `news`.`id` = ".$id;
+            $sql = "DELETE FROM `products` WHERE `products`.`id` = ".$id;
 
             $db = new database();
             $item = $db->executeRun($sql);

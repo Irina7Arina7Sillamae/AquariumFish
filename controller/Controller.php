@@ -2,24 +2,24 @@
 
 class Controller {
     public static function StartSite() {
-        $arr = News::getLast6News();
+        $arr = Products::getLast6Products();
         include_once 'view/start.php';
     }
     public static function AllCategory() {
         $arr = Category::getAllCategory();
         include_once 'view/category.php';
     }
-    public static function AllNews() {
-        $arr = News::getAllNews();
-        include_once 'view/allnews.php';
+    public static function AllProducts() {
+        $arr = Products::getAllProducts();
+        include_once 'view/allproducts.php';
     }
-    public static function NewsByCatID($id) {
-        $arr = News::getNewsByCategoryID($id);
-        include_once 'view/catnews.php';
+    public static function ProductsByCatID($id) {
+        $arr = Products::getProductsByCategoryID($id);
+        include_once 'view/catproducts.php';
     }
-    public static function NewsByID($id) {
-        $n = News::getNewsByID($id);
-        include_once 'view/readnews.php';
+    public static function ProductsByID($id) {
+        $n = Products::getProductsByID($id);
+        include_once 'view/readproducts.php';
     }
      //-----------------------------------Plants
    public static function AllPlants() {
@@ -33,22 +33,22 @@ class Controller {
 
     public static function InsertComment($c, $id) {
     Comments::InsertComment($c, $id);
-    // self::NewsById(id);
-    header('Location:news?id='.$id.'#ctable');
+    // self::ProductsById(id);
+    header('Location:products?id='.$id.'#ctable');
     }
     //список комментариев
-    public static function Comments($newsid) {
-        $arr = Comments::getCommentByNewsID($newsid);
-        ViewComments::CommentsByNews($arr);
+    public static function Comments($productsid) {
+        $arr = Comments::getCommentByProductsID($productsid);
+        ViewComments::CommentsByProducts($arr);
     }
     //количество комментариев к новости
-    public static function CommentsCount($newsid) {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+    public static function CommentsCount($productsid) {
+        $arr = Comments::getCommentsCountByProductsID($productsid);
          ViewComments::CommentsCount($arr);
     }
     //ссылка - переход к списку коментариев
-    public static function CommentsCountWithAncor($newsid) {
-        $arr = Comments::getCommentsCountByNewsID($newsid);
+    public static function CommentsCountWithAncor($productsid) {
+        $arr = Comments::getCommentsCountByProductsID($productsid);
         ViewComments::CommentsCountWithAncor($arr);
     }
     //--------------------------------- РЕГИСТРАЦИЯ
@@ -64,4 +64,4 @@ class Controller {
 }
 // end class
 // $c - текст комментария
-//  id - номер новости
+//  id - номер product
