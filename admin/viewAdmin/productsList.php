@@ -1,6 +1,6 @@
 <?php ob_start() ?>
 
-<h2 style="color: #007bff;">FishList</h2>
+<h2 style="color: #007bff;">ProductList</h2>
 
 <div class="container" style="min-height: 400px;">
     <div style="margin: 20px;">

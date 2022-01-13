@@ -2,11 +2,11 @@
 ob_start();
 ?>
 
-<h1>Aquarium Plants</h1>
+<h1>All Over Products</h1>
 <br>
 
 <?php
-ViewPlants::AllPlants($arr);
+ViewOverProducts::allOverProducts($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';
 ?>

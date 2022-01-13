@@ -25,9 +25,9 @@
                 ?>
                 </ul>
         </li>
-        <li><a class = "zoom" href="testError">Info</a></li>
+        <li><a class = "zoom" href="info">Info</a></li>
         <li><a class = "zoom" href="./">StartPage</a></li>
-        <li><a class = "zoom" href="allPlants">OtherProducts</a></li>
+        <li><a class = "zoom" href="OverProducts">OtherProducts</a></li>
         <li><a class = "zoom" href="registerForm">Registration</a></li>
         <div class="pull-right">
             <li>

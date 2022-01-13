@@ -2,7 +2,7 @@
 body {
   margin:0;
   font-family: Century Gothic; 
-  background: url("images/aquaticplants.jpg") center center/cover no-repeat;
+  background: url("images/plants.jpg") center center/cover no-repeat;
   z-index: 2;
   }
   h1 {
@@ -135,7 +135,6 @@ section{
     display: flex;
     align-content: center;
     justify-content: center;
-    background: url("aquaticplants.jpg") center center/cover no-repeat; 
 }
 
 .search{
@@ -241,9 +240,6 @@ th{
 .zoom:hover {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-section .bg {
-  background: url("images/aquaticplants.jpg") center center/cover no-repeat;
-}
 .one .divBox h1 {
   text-shadow: 1px 1px 1px #000020;/* #b3b3b3 */
 }
@@ -259,6 +255,7 @@ section .divBox b a:hover {
 .container .row .col .zoom {
   text-shadow: 0 0 0 #000020;
 }
+
 
  
 

@@ -2,10 +2,11 @@
 ob_start();
 ?>
 
-<h1 >TOP 6 Products</h1>
+<h1>All Over Products</h1>
 <br>
 
 <?php
+ViewOverProducts::AllOverProducts($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';
 ?>

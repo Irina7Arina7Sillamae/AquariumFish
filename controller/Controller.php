@@ -11,20 +11,20 @@ class Controller {
     }
     public static function AllProducts() {
         $arr = Products::getAllProducts();
-        include_once 'view/allproducts.php';
+        include_once 'view/allProducts.php';
     }
     public static function ProductsByCatID($id) {
         $arr = Products::getProductsByCategoryID($id);
-        include_once 'view/catproducts.php';
+        include_once 'view/catProducts.php';
     }
     public static function ProductsByID($id) {
         $n = Products::getProductsByID($id);
-        include_once 'view/readproducts.php';
+        include_once 'view/readProducts.php';
     }
-     //-----------------------------------Plants
-   public static function AllPlants() {
-    $arr = Plants::getAllPlants();
-    include_once 'view/plants.php';
+     //-----------------------------------OverProducts
+   public static function AllOverProducts() {
+    $arr = OverProducts::getAllOverProducts();
+    include_once 'view/startOverProducts.php';
 }
 
     public static function error404() {
@@ -41,7 +41,7 @@ class Controller {
         $arr = Comments::getCommentByProductsID($productsid);
         ViewComments::CommentsByProducts($arr);
     }
-    //количество комментариев к новости
+    //количество комментариев к Products
     public static function CommentsCount($productsid) {
         $arr = Comments::getCommentsCountByProductsID($productsid);
          ViewComments::CommentsCount($arr);

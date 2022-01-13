@@ -1,10 +1,10 @@
 <?php
 ob_start();
 ?>
-
-<h1>All Aquarium Fish</h1>
-<br>
-
+<div class="bgAllProd">
+    <h1>All Products</h1>
+    <br>
+</div>
 <?php
 ViewProducts::AllProducts($arr);
 $content = ob_get_clean();

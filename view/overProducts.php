@@ -1,7 +1,7 @@
 <?php
-class ViewProducts {
+class ViewOverProducts {
 
-    public static function ProductsByCategory ($arr) {
+    public static function AllOverProducts ($arr) {
         echo '<div class="container">';
         echo '<div class="row">';
 
@@ -14,20 +14,20 @@ class ViewProducts {
             echo "<h3>".$value['title']."</h3>";
             echo '</div>';
             Controller::CommentsCount($value['id']);
-            echo "<a class='next' href='products?id=".$value['id']."'>Next</a><br>";
+            echo "<a class='next' href='overProducts?id=".$value['id']."'>Next</a><br>";
             echo '</div>';
         }
         echo '</div>';
         echo '</div>';
     }
-    public static function AllProducts ($arr) {
-        foreach ($arr as $value) {
-            echo "<li>".$value['title'];
-            Controller::CommentsCount($value['id']);
-            echo "<a class='next' href='products?id=".$value['id']."'>Next</a></li><br>";
-        }
-    }
-    public static function ReadProducts ($n) {
+    //public static function AllOverProducts ($arr) {
+    //    foreach ($arr as $value) {
+    //        echo "<li>".$value['title'];
+    //        Controller::CommentsCount($value['id']);
+    //        echo "<a class='next' href='overProducts?id=".$value['id']."'>Next</a></li><br>";
+    //    }
+    //}
+    public static function ReadOverProducts ($n) {
         echo "<h2>".$n['title']."</h2>";
         Controller::CommentsCountWithAncor($n['id']);   
         echo '<br><img class = "zoom" src="data:image/ipeg;base64,'.base64_encode($n['picture']).'"

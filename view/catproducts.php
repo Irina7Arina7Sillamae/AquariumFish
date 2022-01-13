@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<h1>Fish (categories)</h1>
+<h1>Products (categories)</h1>
 <br>
 
 <?php

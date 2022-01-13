@@ -5,11 +5,11 @@ require 'model/Category.php';
 require 'model/Products.php';
 require 'model/Comments.php';
 require 'model/Register.php';
-require 'model/Plants.php';
+require 'model/OverProducts.php';
 
 include_once 'view/products.php';
 include_once 'view/comments.php';
-include_once 'view/aplants.php';
+include_once 'view/overProducts.php';
 
 include_once 'controller/Controller.php';
 include_once 'route/routing.php';
