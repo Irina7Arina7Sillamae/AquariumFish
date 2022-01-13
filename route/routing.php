@@ -20,11 +20,13 @@ elseif($path == 'products' and isset($_GET['id'])) {
 elseif($path == 'insertcomment' and isset($_GET['comment'],$_GET['id'])) {
     $response = Controller::InsertComment($_GET['comment'],$_GET['id']);
 }
+elseif($path == 'info') {
+    $response = Controller::Info();
+}
 //------------------------------------plants
 elseif($path == 'OverProducts') {
     $response = Controller::AllOverProducts();
 }
-
 //------------------------------------register user
 elseif ($path == 'registerForm' )
 {       // form register

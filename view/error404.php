@@ -1,11 +1,8 @@
 <?php
 ob_start();
 ?>
-<div class = "bgc">
-    <h1>Error 404</h1>
-</div>
 
-
+<h1>Error 404</h1>
 
 <?php
 $content = ob_get_clean();
