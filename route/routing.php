@@ -27,6 +27,9 @@ elseif($path == 'info') {
 elseif($path == 'OverProducts') {
     $response = Controller::AllOverProducts();
 }
+elseif($path == 'overProducts'and isset($_GET['id'])) {
+    $response = Controller::OverProductsByID($_GET['id']);
+}
 //------------------------------------register user
 elseif ($path == 'registerForm' )
 {       // form register

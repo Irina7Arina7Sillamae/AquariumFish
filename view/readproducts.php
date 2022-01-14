@@ -2,6 +2,8 @@
 ob_start();
 ?>
 
+
+
 <br>
 <?php
 ViewProducts::ReadProducts($n);

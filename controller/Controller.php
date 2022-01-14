@@ -23,32 +23,41 @@ class Controller {
     }
      //-----------------------------------OverProducts
    public static function AllOverProducts() {
-    $arr = OverProducts::getAllOverProducts();
-    include_once 'view/startOverProducts.php';
-}
+        $arr = OverProducts::getAllOverProducts();
+        include_once 'view/startOverProducts.php';
+   }
 
+    public static function OverProductsByID($id) {
+        $n = OverProducts::getOverProductsByID($id);
+        include_once 'view/readOverProducts.php';
+    }
+    //-----------------------------------------error
     public static function error404() {
         include_once 'view/error404.php';
     }
+    //------------------------------------------Info
     public static function info() {
         include_once 'view/info.php';
     }
-
+//---------------------------------------------Comment
     public static function InsertComment($c, $id) {
     Comments::InsertComment($c, $id);
     // self::ProductsById(id);
     header('Location:products?id='.$id.'#ctable');
     }
+
     //список комментариев
     public static function Comments($productsid) {
         $arr = Comments::getCommentByProductsID($productsid);
         ViewComments::CommentsByProducts($arr);
     }
+
     //количество комментариев к Products
     public static function CommentsCount($productsid) {
         $arr = Comments::getCommentsCountByProductsID($productsid);
          ViewComments::CommentsCount($arr);
     }
+
     //ссылка - переход к списку коментариев
     public static function CommentsCountWithAncor($productsid) {
         $arr = Comments::getCommentsCountByProductsID($productsid);

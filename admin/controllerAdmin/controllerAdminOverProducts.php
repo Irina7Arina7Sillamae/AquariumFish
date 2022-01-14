@@ -12,9 +12,9 @@ class controllerAdminOverProducts {
         include_once('viewAdmin/overProductsAddForm.php');
     }
 
-    public static function productsAddResult() {
+    public static function overProductsAddResult() {
         $test = modelAdminOverProducts::getOverProductsAdd();
-        include_once('viewAdmin/productsAddForm.php');
+        include_once('viewAdmin/overProductsAddForm.php');
     }
 //-------------------------------------------------edit
     public static function overProductsEditForm($id) {

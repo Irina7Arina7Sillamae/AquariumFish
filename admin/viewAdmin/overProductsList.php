@@ -1,16 +1,16 @@
 <?php ob_start() ?>
 
-<h2 style="color: #007bff;">ProductList</h2>
+<h2 style="color: #007bff;">OverProductList</h2>
 
 <div class="container" style="min-height: 400px;">
     <div style="margin: 20px;">
-        <a class="btn btn-primary" href="productsAdd" role="button" style="background-color: #007bff;">Add product</a>
+        <a class="btn btn-primary" href="productsAdd" role="button" style="background-color: #007bff;">Add OverProduct</a>
     </div>
     <div class="col-md-11">
         <table class="table table-bordered table-responsive">
             <tr>
                 <th width="10%">ID</th>
-                <th width="70%">Header Products</th>
+                <th width="70%">Header Over Products</th>
                 <th width="20%"></th>
             </tr>
         <?php
@@ -25,9 +25,9 @@
                 echo '<br><b>Author: </b><i>'.$row['username'].'</i>';
                 echo '</td>';
                 echo '<td>
-                <a href="productsEdit?id='.$row['id'].'">Edit <span class="gliphicon 
+                <a href="overproductsEdit?id='.$row['id'].'">Edit <span class="gliphicon 
                 gliphicon-edit" aria-hidden = "true"></span></a>
-                <a href="productsDel?id='.$row['id'].'">Delete <span class="gliphicon 
+                <a href="overproductsDel?id='.$row['id'].'">Delete <span class="gliphicon 
                 gliphicon-remove" aria-hidden = "true"></span></a>
                 </td>  ';
 

@@ -13,7 +13,7 @@ class ViewOverProducts {
             echo '</div>';
             echo "<h3>".$value['title']."</h3>";
             echo '</div>';
-            Controller::CommentsCount($value['id']);
+            //Controller::CommentsCount($value['id']);
             echo "<a class='next' href='overProducts?id=".$value['id']."'>Next</a><br>";
             echo '</div>';
         }
@@ -29,11 +29,14 @@ class ViewOverProducts {
     //}
     public static function ReadOverProducts ($n) {
         echo "<h2>".$n['title']."</h2>";
-        Controller::CommentsCountWithAncor($n['id']);   
+        //Controller::CommentsCountWithAncor($n['id']);   
         echo '<br><img class = "zoom" src="data:image/ipeg;base64,'.base64_encode($n['picture']).'"
         width=250 height=200/><br>';   
 
         echo "<p><br>".$n['text']."</p>";
+
+        echo '<a class = "back" href="OverProducts">Back</a>';
+
         }
     //Добавить методы для других видов представления Product
     }//end class

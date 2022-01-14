@@ -6,7 +6,6 @@ class Comments {
     $db = new database();
     $q = $db->executeRun($query);
     return $q;
-
     }
 
     public static function getCommentByProductsID($id) {
@@ -21,6 +20,5 @@ class Comments {
     $db = new database();
     $c = $db->getOne($query);
     return $c;
-
     }
 }

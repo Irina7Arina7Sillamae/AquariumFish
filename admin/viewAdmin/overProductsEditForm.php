@@ -1,20 +1,20 @@
-<?php ob_start(); ?>Product
+<?php ob_start(); ?>OverProduct
 
 <div class="container" style="min-height: 400px;">
     <div class="col-md-11">
-        <h2>Products Edit</h2>
+        <h2>OverProducts Edit</h2>
         <?php
         if (isset($test)) {
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been modified. </strong><a href="productsAdmin">Product List</a>
+                    <strong>The entry has been modified. </strong><a href="productsAdmin">OverProduct List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record change error!</strong><a href="productsAdmin">Product List</a>
+                    <strong>Record change error!</strong><a href="productsAdmin">OverProduct List</a>
                 </div>
             <?php
             }
@@ -23,12 +23,12 @@
             <form method="POST" action="productsEditResult?id=<?php echo $id; ?>" enctype="multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
-                        <td>Products title</td>
+                        <td>OverProducts title</td>
                         <td><input type="text" name="title" class="form-control" required value="<?php 
                         echo $detail['title']; ?>" ></td>
                     </tr>
                     <tr>
-                        <td>Products text</td>
+                        <td>OverProducts text</td>
                         <td><textarea rows="5" name="text" class="form-control" required><?php 
                         echo $detail['text']; ?></textarea></td>
                     </tr>
@@ -70,8 +70,7 @@
                     <tr>
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
-                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Change
-                            </button>
+                                <span class="glyphicon glyphicon-plus"></span> &nbsp;Change</button>
                             <a href="ProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>

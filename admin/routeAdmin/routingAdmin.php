@@ -22,26 +22,48 @@ elseif ($path == 'logout')
 elseif($path=='productsAdmin') {
     $response = controllerAdminProducts::ProductsList();
 }
-//---------------------------------------add products
+//---------------------------------------listOverProducts
+elseif($path=='overProductsAdmin') {
+    $response = controllerAdminOverProducts::OverProductsList();
+}
+//---------------------------------------add products, overProducts
 elseif($path=='productsAdd') {
     $response = controllerAdminProducts::productsAddForm();
 }
 elseif($path=='productsAddResult') {
     $response = controllerAdminProducts::productsAddResult();
 }
-//---------------------------------------edit products
+elseif($path=='overProductsAdd') {
+    $response = controllerAdminOverProducts::overProductsAddForm();
+}
+elseif($path=='overProductsAddResult') {
+    $response = controllerAdminOverProducts::overProductsAddResult();
+}
+//---------------------------------------edit products, overProducts
 elseif($path=='productsEdit' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsEditForm($_GET['id']);
 }
 elseif($path=='productsEditResult' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsEditResult($_GET['id']);
 }
-//-------------------------------------delete products
+elseif($path=='overProductsEdit' && isset($_GET['id'])) {
+    $response = controllerAdminOverProducts::overProductsEditForm($_GET['id']);
+}
+elseif($path=='overProductsEditResult' && isset($_GET['id'])) {
+    $response = controllerAdminProducts::productsEditResult($_GET['id']);
+}
+//-------------------------------------delete products, overProducts
 elseif($path=='productsDel' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsDeleteForm($_GET['id']);
 }
 elseif($path=='productsDelResult' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsDeleteResult($_GET['id']);
+}
+elseif($path=='overProductsDel' && isset($_GET['id'])) {
+    $response = controllerAdminOverProducts::overProductsDeleteForm($_GET['id']);
+}
+elseif($path=='overProductsDelResult' && isset($_GET['id'])) {
+    $response = controllerAdminOverProducts::overProductsDeleteResult($_GET['id']);
 }
 else {   // Страница не существует
     $response = controllerAdmin::error404();

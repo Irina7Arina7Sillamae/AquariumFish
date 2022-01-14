@@ -2,19 +2,19 @@
 
 <div class="container" style="min-height: 400px;">
     <div class="col-md-11">
-        <h2>Products Delete</h2>
+        <h2>OverProducts Delete</h2>
         <?php
         if (isset($test)) {
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been deleted. </strong><a href="productsAdmin">Product List</a>
+                    <strong>The entry has been deleted. </strong><a href="productsAdmin">OverProduct List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record deletion error!</strong><a href="productsAdmin">Product List</a>
+                    <strong>Record deletion error!</strong><a href="productsAdmin">OverProduct List</a>
                 </div>
             <?php
             }
@@ -24,12 +24,12 @@
            "multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
-                        <td>Products title</td>
+                        <td>OverProducts title</td>
                         <td><input type="text" name="title" class="form-control" disabled required value=<?php 
                         echo $detail['title']; ?> readonly></td>
                     </tr>
                     <tr>
-                        <td>Products text</td>
+                        <td>OverProducts text</td>
                         <td><textarea rows="10" name="text" class="form-control" disabled required readonly><?php 
                         echo $detail['text']; ?></textarea></td>
                     </tr>
@@ -61,8 +61,7 @@
                     <tr>
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
-                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Delete
-                            </button>
+                                <span class="glyphicon glyphicon-plus"></span>&nbsp;Delete</button>
                             <a href="productsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>
