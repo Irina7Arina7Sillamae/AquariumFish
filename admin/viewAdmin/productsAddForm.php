@@ -9,14 +9,14 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>Entry added</strong><a href="newsAdmin">Product List</a>
+                    <strong>Entry added</strong><a href="productsAdmin">Product List</a>
                 </div>
             <?php
             } else if ($test == false) {
 
             ?>
                 <div class="alert alert-warning">
-                    <strong>Error adding record!</strong><a href="newsAdmin">Product List</a>
+                    <strong>Error adding record!</strong><a href="productsAdmin">Product List</a>
                 </div>
             <?php
             }
@@ -60,7 +60,7 @@
                             <button type="submit" class="btn btn-primary" name="save">
                                 <span class="glyphicon glyphicon-plus"></span> &nbsp;Save
                             </button>
-                            <a href="newsAdmin" class="btn btn-large btn-success">
+                            <a href="productsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>
                     </tr>

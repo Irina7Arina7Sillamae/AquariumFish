@@ -110,6 +110,7 @@ a:hover {
   color: gold;
   transition: 0.3s;
   text-decoration: underline;
+  transform: scale(1.2);
 }
 .one .submenu {
   display: none;

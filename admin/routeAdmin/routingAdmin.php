@@ -18,11 +18,10 @@ elseif ($path == 'logout')
     // Выход
     $response = controllerAdmin::logoutAction();
 }
-//---------------------------------------listProducts
+//---------------------------------------listProducts, listOverProducts
 elseif($path=='productsAdmin') {
     $response = controllerAdminProducts::ProductsList();
 }
-//---------------------------------------listOverProducts
 elseif($path=='overProductsAdmin') {
     $response = controllerAdminOverProducts::OverProductsList();
 }
@@ -33,7 +32,7 @@ elseif($path=='productsAdd') {
 elseif($path=='productsAddResult') {
     $response = controllerAdminProducts::productsAddResult();
 }
-elseif($path=='overProductsAdd') {
+elseif($path=='OverProductsAdd') {
     $response = controllerAdminOverProducts::overProductsAddForm();
 }
 elseif($path=='overProductsAddResult') {
@@ -46,11 +45,11 @@ elseif($path=='productsEdit' && isset($_GET['id'])) {
 elseif($path=='productsEditResult' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsEditResult($_GET['id']);
 }
-elseif($path=='overProductsEdit' && isset($_GET['id'])) {
+elseif($path=='overproductsEdit' && isset($_GET['id'])) {
     $response = controllerAdminOverProducts::overProductsEditForm($_GET['id']);
 }
 elseif($path=='overProductsEditResult' && isset($_GET['id'])) {
-    $response = controllerAdminProducts::productsEditResult($_GET['id']);
+    $response = controllerAdminOverProducts::overProductsEditResult($_GET['id']);
 }
 //-------------------------------------delete products, overProducts
 elseif($path=='productsDel' && isset($_GET['id'])) {

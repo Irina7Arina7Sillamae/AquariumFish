@@ -28,6 +28,7 @@
                 </ul>
             </li>
             <li><a class="zoom" href="info">Info</a></li>
+            <li><a class="zoom" href="aquarium">Aquarium</a></li>
             <li><a class="zoom" href="./">StartPage</a></li>
             <li><a class="zoom" href="OverProducts">OtherProducts</a></li>
             <li><a class="zoom" href="registerForm">Registration</a></li>

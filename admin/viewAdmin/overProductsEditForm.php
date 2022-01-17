@@ -1,4 +1,4 @@
-<?php ob_start(); ?>OverProduct
+<?php ob_start(); ?>
 
 <div class="container" style="min-height: 400px;">
     <div class="col-md-11">
@@ -8,19 +8,19 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been modified. </strong><a href="productsAdmin">OverProduct List</a>
+                    <strong>The entry has been modified. </strong><a href="overProductsAdmin">OverProduct List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record change error!</strong><a href="productsAdmin">OverProduct List</a>
+                    <strong>Record change error!</strong><a href="overProductsAdmin">OverProduct List</a>
                 </div>
             <?php
             }
         } else {
             ?>
-            <form method="POST" action="productsEditResult?id=<?php echo $id; ?>" enctype="multipart/form-data">
+            <form method="POST" action="overProductsEditResult?id=<?php echo $id; ?>" enctype="multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
                         <td>OverProducts title</td>
@@ -71,7 +71,7 @@
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
                                 <span class="glyphicon glyphicon-plus"></span> &nbsp;Change</button>
-                            <a href="ProductsAdmin" class="btn btn-large btn-success">
+                            <a href="OverProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>
                     </tr>

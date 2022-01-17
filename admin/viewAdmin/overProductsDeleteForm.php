@@ -62,7 +62,7 @@
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
                                 <span class="glyphicon glyphicon-plus"></span>&nbsp;Delete</button>
-                            <a href="productsAdmin" class="btn btn-large btn-success">
+                            <a href="overProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>
                     </tr>

@@ -23,6 +23,9 @@ elseif($path == 'insertcomment' and isset($_GET['comment'],$_GET['id'])) {
 elseif($path == 'info') {
     $response = Controller::Info();
 }
+elseif($path == 'aquarium') {
+    $response = Controller::Aquarium();
+}
 //------------------------------------plants
 elseif($path == 'OverProducts') {
     $response = Controller::AllOverProducts();

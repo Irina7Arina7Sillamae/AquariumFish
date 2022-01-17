@@ -3,6 +3,7 @@ ob_start();
 ?>
 
 <h1>Products (categories)</h1>
+
 <br>
 
 <?php

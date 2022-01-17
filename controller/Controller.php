@@ -39,6 +39,10 @@ class Controller {
     public static function info() {
         include_once 'view/info.php';
     }
+    //------------------------------------------Info
+    public static function aquarium() {
+        include_once 'view/aquarium.php';
+    }
 //---------------------------------------------Comment
     public static function InsertComment($c, $id) {
     Comments::InsertComment($c, $id);
