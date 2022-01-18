@@ -25,5 +25,11 @@ class Products {
         $n = $db->getOne($query);
         return $n;
     }
+    public static function getSearchProducts($s) {
+        $query = 'SELECT * FROM products where title like "%'.$s.'%" or text like "%'.$s.'%"';     
+        $db = new database();
+        $n = $db->getAll($query);
+        return $n;
+    }
 }
 ?>

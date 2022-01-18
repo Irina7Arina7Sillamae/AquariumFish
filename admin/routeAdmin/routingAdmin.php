@@ -58,11 +58,11 @@ elseif($path=='productsDel' && isset($_GET['id'])) {
 elseif($path=='productsDelResult' && isset($_GET['id'])) {
     $response = controllerAdminProducts::productsDeleteResult($_GET['id']);
 }
-elseif($path=='overProductsDel' && isset($_GET['id'])) {
+elseif($path=='overproductsDel' && isset($_GET['id'])) {
     $response = controllerAdminOverProducts::overProductsDeleteForm($_GET['id']);
 }
 elseif($path=='overProductsDelResult' && isset($_GET['id'])) {
-    $response = controllerAdminOverProducts::overProductsDeleteResult($_GET['id']);
+    $response = controllerAdminOverProducts::overproductsDeleteResult($_GET['id']);
 }
 else {   // Страница не существует
     $response = controllerAdmin::error404();

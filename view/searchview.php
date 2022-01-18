@@ -1,10 +1,10 @@
 <?php
 ob_start();
-?>
 
-    <h1>All Products</h1>
+echo "<h1 >Search result:</h1>";
+echo "<h2><b>". $_GET['search'].":</b></h2>";
 
-<?php
+
 ViewProducts::AllProducts($arr);
 $content = ob_get_clean();
 include_once 'view/layout.php';

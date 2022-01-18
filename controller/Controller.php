@@ -35,6 +35,11 @@ class Controller {
     public static function error404() {
         include_once 'view/error404.php';
     }
+    //----------------------------------------search
+    public static function SearchProducts($search) {
+        $arr = Products::getSearchProducts($search);
+        include_once 'view/searchview.php';
+   }
     //------------------------------------------Info
     public static function info() {
         include_once 'view/info.php';
