@@ -62,7 +62,7 @@ elseif($path=='overproductsDel' && isset($_GET['id'])) {
     $response = controllerAdminOverProducts::overProductsDeleteForm($_GET['id']);
 }
 elseif($path=='overProductsDelResult' && isset($_GET['id'])) {
-    $response = controllerAdminOverProducts::overproductsDeleteResult($_GET['id']);
+    $response = controllerAdminOverProducts::overProductsDeleteResult($_GET['id']);
 }
 else {   // Страница не существует
     $response = controllerAdmin::error404();
