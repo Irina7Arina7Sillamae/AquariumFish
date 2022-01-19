@@ -8,13 +8,13 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been deleted. </strong><a href="productsAdmin">Product List</a>
+                    <strong>The entry has been deleted. </strong><a href="productsAdmin">Products List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record deletion error!</strong><a href="productsAdmin">Product List</a>
+                    <strong>Record deletion error!</strong><a href="productsAdmin">Products List</a>
                 </div>
             <?php
             }

@@ -8,13 +8,13 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been modified. </strong><a href="overProductsAdmin">OverProduct List</a>
+                    <strong>The entry has been modified. </strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record change error!</strong><a href="overProductsAdmin">OverProduct List</a>
+                    <strong>Record change error!</strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             }
@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <td>OverProducts text</td>
-                        <td><textarea rows="5" name="text" class="form-control" required><?php 
+                        <td><textarea rows="10" name="text" class="form-control" required><?php 
                         echo $detail['text']; ?></textarea></td>
                     </tr>
                     <tr>
@@ -71,7 +71,7 @@
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
                                 <span class="glyphicon glyphicon-plus"></span> &nbsp;Change</button>
-                            <a href="OverProductsAdmin" class="btn btn-large btn-success">
+                            <a href="overProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>
                     </tr>

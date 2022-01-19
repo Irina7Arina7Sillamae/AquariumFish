@@ -8,19 +8,19 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>The entry has been deleted. </strong><a href="productsAdmin">OverProduct List</a>
+                    <strong>The entry has been deleted. </strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             } else if ($test == false) {
             ?>
                 <div class="alert alert-warning">
-                    <strong>Record deletion error!</strong><a href="productsAdmin">OverProduct List</a>
+                    <strong>Record deletion error!</strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             }
         } else {
             ?>
-           <form method="POST" action="productsDelResult?id=<?php echo $id; ?>" enctype=
+           <form method="POST" action="overProductsDelResult?id=<?php echo $id; ?>" enctype=
            "multipart/form-data">
                 <table class="table table-bordered">
                     <tr>
@@ -61,7 +61,8 @@
                     <tr>
                         <td colspan="2">
                             <button type="submit" class="btn btn-primary" name="save">
-                                <span class="glyphicon glyphicon-plus"></span> &nbsp;Delete</button>
+                                <span class="glyphicon glyphicon-plus"></span> &nbsp;Delete
+                            </button>
                             <a href="overProductsAdmin" class="btn btn-large btn-success">
                                 <i class="glyphicon glyphicon-backward"></i> &nbsp;Back to list</a>
                         </td>

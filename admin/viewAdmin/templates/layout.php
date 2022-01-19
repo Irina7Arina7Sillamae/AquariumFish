@@ -33,7 +33,7 @@ if(isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
             echo '   &#187 <a href="./" style="color: #007bff;">Start admin</a>';
             echo '   &#187 <a href="categoryAdmin" style="color: #007bff;">Products categories</a>';
             echo '   &#187 <a href="productsAdmin" style="color: #007bff;">ProductsList</a>';
-            echo '   &#187 <a href="overProductsAdmin" style="color: #007bff;">OverProducsList</a>';
+            echo '   &#187 <a href="overProductsAdmin" style="color: #007bff;">OverProductsList</a>';
             
             echo ' </h4>';
 }else{

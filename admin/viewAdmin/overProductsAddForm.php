@@ -9,14 +9,14 @@
             if ($test == true) {
         ?>
                 <div class="alert alert-info">
-                    <strong>Entry added</strong><a href="overProductsAdmin">OverProduct List</a>
+                    <strong>Entry added</strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             } else if ($test == false) {
 
             ?>
                 <div class="alert alert-warning">
-                    <strong>Error adding record!</strong><a href="overProductsAdmin">OverProduct List</a>
+                    <strong>Error adding record!</strong><a href="overProductsAdmin">OverProducts List</a>
                 </div>
             <?php
             }
